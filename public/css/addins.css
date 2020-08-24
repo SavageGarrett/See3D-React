@@ -131,3 +131,24 @@
 .footer_widget p {
     color: white !important;
 }
+
+/* Inline CSS Moved to File */
+
+.marg-30-bottom {
+    margin-bottom: 30px;
+}
+
+
+/* Page Paragraphs */
+.markdown-paragraph p {
+    font-size: 20px !important;
+    color: #001D38 !important;
+}
+
+.markdown-paragraph p a {
+    color: #7cc8ff !important;
+}
+
+.markdown-paragraph p a:hover {
+    color: #7cc8ff !important;
+}
