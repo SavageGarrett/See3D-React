@@ -2,6 +2,10 @@
     Custom CSS Addins for See3D
     Created 06/03/2020
 */
+.main {
+    background-color: #F5F7FA;
+}
+
 .a{
     color: #001d38;
 }
@@ -138,6 +142,13 @@
     margin-bottom: 30px;
 }
 
+.pad-top {
+    padding-top: 100px;
+}
+
+.marg-top {
+    margin-top: 100px;
+}
 
 /* Page Paragraphs */
 .markdown-paragraph p {

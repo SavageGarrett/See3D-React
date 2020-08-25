@@ -1,6 +1,33 @@
 import React from "react"
+import useScript from '../useScript';
 
 function Footer() {
+
+    useScript('js/vendor/modernizr-3.5.0.min.js', false);
+    useScript('js/vendor/jquery-1.12.4.min.js', false);
+    useScript('js/popper.min.js', false);
+    useScript('js/bootstrap.min.js', false);
+    useScript('js/owl.carousel.min.js', false);
+    useScript('js/isotope.pkgd.min.js', false);
+    useScript('js/waypoints.min.js', false);
+    useScript('js/jquery.counterup.min.js', false);
+    useScript('js/imagesloaded.pkgd.min.js', false);
+    useScript('js/scrollIt.js', false);
+    useScript('js/jquery.scrollUp.min.js', false);
+    useScript('js/wow.min.js', false);
+    useScript('js/nice-select.min.js', false);
+    useScript('js/jquery.slicknav.min.js', false);
+    useScript('js/jquery.magnific-popup.min.js', false);
+    useScript('js/plugins.js', false);
+    useScript('js/gijgo.min.js', false);
+    useScript('js/jquery.ajaxchimp.min.js', false);
+    useScript('js/jquery.form.js', false);
+    useScript('js/jquery.validate.min.js', false);
+    useScript('js/mail-script.js', false);
+    useScript('js/main.js', false);
+    useScript('https://www.googletagmanager.com/gtag/js?id=UA-153533872-1', true);
+    useScript('js/datalayer.js', false);
+
     return(
         <footer class="footer">
             <div class="footer_top">
@@ -63,30 +90,6 @@ function Footer() {
                                 <script>
                                     document.write(new Date().getFullYear());
                                 </script> All rights reserved | This template is made with <i class="fa fa-heart-o" aria-hidden="true"></i> by <a href="https://colorlib.com" target="_blank" rel="noopener noreferrer">Colorlib</a>
-                                <script src="js/vendor/modernizr-3.5.0.min.js"></script>
-                                <script src="js/vendor/jquery-1.12.4.min.js"></script>
-                                <script src="js/popper.min.js"></script>
-                                <script src="js/bootstrap.min.js"></script>
-                                <script src="js/owl.carousel.min.js"></script>
-                                <script src="js/isotope.pkgd.min.js"></script>
-                                <script src="js/waypoints.min.js"></script>
-                                <script src="js/jquery.counterup.min.js"></script>
-                                <script src="js/imagesloaded.pkgd.min.js"></script>
-                                <script src="js/scrollIt.js"></script>
-                                <script src="js/jquery.scrollUp.min.js"></script>
-                                <script src="js/wow.min.js"></script>
-                                <script src="js/nice-select.min.js"></script>
-                                <script src="js/jquery.slicknav.min.js"></script>
-                                <script src="js/jquery.magnific-popup.min.js"></script>
-                                <script src="js/plugins.js"></script>
-                                <script src="js/gijgo.min.js"></script>
-                                <script src="js/jquery.ajaxchimp.min.js"></script>
-                                <script src="js/jquery.form.js"></script>
-                                <script src="js/jquery.validate.min.js"></script>
-                                <script src="js/mail-script.js"></script>
-                                <script src="js/main.js"></script>
-                                <script async="" src="https://www.googletagmanager.com/gtag/js?id=UA-153533872-1"></script>
-                                <script src="js/datalayer.js"></script>
                             </p>
                         </div>
                     </div>
