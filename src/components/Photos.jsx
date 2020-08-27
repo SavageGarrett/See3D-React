@@ -1,5 +1,5 @@
 import React, { Component } from "react"
-import {useLocation} from "react-router-dom"
+import { withRouter } from "react-router-dom"
 let axios = require('axios')
 
 function getNumEntries(link) {
@@ -48,26 +48,47 @@ function PhotoBoxes(props) {
     return boxes
 }
 
+//TODO
 function Pagination(props) {
-    return null
+    let prev_arrow_display = 'none', next_arrow_display = 'none';
+    
+
+    return (
+        null
+        // <nav class="blog-pagination justify-content-center d-flex" style="margin-bottom: 40px;">
+        //     <ul class="pagination">
+        //         <li class="page-item" style="display: none;"><a class="page-link" href="gallery.html?p=1" aria-label="Previous"><i class="ti-angle-left"></i></a></li>
+        //         <li class="page-item active"><a class="page-link" href="gallery.html?p=1"></a></li>
+        //         <li class="page-item active"><a class="page-link" href="gallery.html?p=1"></a></li>
+        //         <li class="page-item active"><a class="page-link" href="gallery.html?p=1"></a></li>
+        //         <li class="page-item" style="display: block;"><a class="page-link" href="gallery.html?p=1" aria-label="Next"><i class="ti-angle-right"></i></a></li>
+        //     </ul>
+        // </nav>
+    )
 }
     
 
 class Photos extends Component {
 
     state = {
-        page: null,
+        page: 1,
         num_entries: null,
         images: []
     }
 
     componentDidMount() {
-        //const search = useLocation().search;
-        //const page = new URLSearchParams(search).get('p');
-        const page = 1;
+        let page = 1;
+
+        if (this.props.location.hasOwnProperty('search')) {
+            const params = new URLSearchParams(this.props.location.search)
+            
+            if (params.get('p') != void 0 && !isNaN(params.get('p'))) page = params.get('p')
+        }
 
         let num_entries = getNumEntries('http://40.76.54.72:8092/galleries/count')
         let images = getEntries(page)
+
+
 
         Promise.all([num_entries, images])
             .then(values => {
@@ -95,4 +116,4 @@ class Photos extends Component {
     }
 }
 
-export default Photos
+export default withRouter(Photos)

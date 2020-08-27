@@ -184,6 +184,7 @@ let HomePage = {
 
 
 function App() {
+
     return(
     <div>
         {/* NavBar and Page Body */}
@@ -196,8 +197,8 @@ function App() {
             <Route path="/team" component={Team}>
                 <Team/>
             </Route>
-            <Route exact path="/gallery" component={Photos}>
-                <Photos/>
+            <Route path="/gallery" component={Photos}>
+                <Photos />
             </Route>
             <Route path="/blog" component={Blog}>
                 <Blog/>
