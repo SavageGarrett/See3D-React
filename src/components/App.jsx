@@ -9,7 +9,7 @@ import Home from "./Home"
 import Team from "./Team"
 import Footer from "./Footer"
 
-/* State Data */
+/* Home Page State Data */
 let HomePage = {
     AboutCard: {
         title: "About Our Project",
@@ -196,7 +196,7 @@ function App() {
             <Route path="/team" component={Team}>
                 <Team/>
             </Route>
-            <Route path="/gallery" component={Photos}>
+            <Route exact path="/gallery" component={Photos}>
                 <Photos/>
             </Route>
             <Route path="/blog" component={Blog}>
