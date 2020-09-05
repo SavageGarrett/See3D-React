@@ -8,6 +8,8 @@ import Contact from "./Contact"
 import Home from "./Home"
 import Team from "./Team"
 import Footer from "./Footer"
+import IndexHeader from "./IndexHeader"
+
 
 /* Home Page State Data */
 let HomePage = {
@@ -183,13 +185,18 @@ let HomePage = {
 }
 
 
+
+
+
+
+
 function App() {
 
     return(
     <div>
         {/* NavBar and Page Body */}
         <Router>
-            <NavBar/>
+            <IndexHeader/>
         <Switch>
             <Route path="/index" component={Home}>
                 <Home {...HomePage} ></Home>

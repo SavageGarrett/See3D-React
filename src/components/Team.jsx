@@ -1,12 +1,19 @@
 import React from "react"
+import RegularHeader from "./RegularHeader"
 
 
 function Team() {
 
+    const headingName = "Team"
+
+    
+
     return (
-        <header>
-            <h1>See3D Team</h1>
-        </header>
+       <RegularHeader
+       heading={headingName}
+       
+       
+       />
 
     )
 

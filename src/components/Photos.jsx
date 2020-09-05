@@ -1,5 +1,6 @@
 import React, { Component } from "react"
 import { withRouter } from "react-router-dom"
+import RegularHeader from "./RegularHeader"
 let axios = require('axios')
 
 function getNumEntries(link) {
@@ -103,6 +104,7 @@ class Photos extends Component {
 
     render() {
         return (
+            
             <div class="popular_catagory_area">
                 <div class="container">
                     <div class="row gallery-item">

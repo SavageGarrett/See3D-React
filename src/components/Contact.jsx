@@ -1,10 +1,16 @@
 import React from "react"
+import RegularHeader from "./RegularHeader"
 
-function Contact() {
+function Contact(props) {
+
+    const headingName = "Contact"
+
     return(
-        <header>
-            <h1>Contact</h1>
-        </header>
+        <RegularHeader
+        heading={headingName}
+        
+        
+        />
     )
 }
 
