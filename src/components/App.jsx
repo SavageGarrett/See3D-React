@@ -216,6 +216,9 @@ function App() {
             <Route path="/contact" component={Donate}>
                 <Contact/>
             </Route>
+            <Route path="/" component={Home}>
+                <Home {...HomePage}></Home>
+            </Route>
         </Switch>
         </Router>
 

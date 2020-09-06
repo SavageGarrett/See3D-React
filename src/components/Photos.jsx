@@ -3,6 +3,10 @@ import { withRouter } from "react-router-dom"
 import RegularHeader from "./RegularHeader"
 let axios = require('axios')
 
+/**
+ * Get number of entries in strapi gallery
+ * @param {*} link Strapi count link
+ */
 function getNumEntries(link) {
     return new Promise((resolve, reject) => {
         axios.get(link)
@@ -15,6 +19,10 @@ function getNumEntries(link) {
     })
 }
 
+/**
+ * Get gallery entries from strapi
+ * @param {*} page Gallery Page Number
+ */
 function getEntries(page) {
     return new Promise((resolve, reject) => {
         axios.get(`http://40.76.54.72:8092/galleries?_start=${(page - 1) * 10}&_limit=10`)
@@ -28,6 +36,10 @@ function getEntries(page) {
     
 }
 
+/**
+ * PhotoBoxes Component
+ * @param {*} props Component Properties
+ */
 function PhotoBoxes(props) {
     let boxes = []
 
@@ -50,6 +62,10 @@ function PhotoBoxes(props) {
 }
 
 //TODO
+/**
+ * Pagination Component
+ * @param {*} props Component Properties
+ */
 function Pagination(props) {
     let prev_arrow_display = 'none', next_arrow_display = 'none';
     
@@ -68,15 +84,23 @@ function Pagination(props) {
     )
 }
     
-
+/**
+ * Photos Component
+ */
 class Photos extends Component {
 
+    /**
+     * Component State Data
+     */
     state = {
         page: 1,
         num_entries: null,
         images: []
     }
 
+    /**
+     * Strapi API Calls
+     */
     componentDidMount() {
         let page = 1;
 
@@ -102,18 +126,22 @@ class Photos extends Component {
             .catch(err => { console.log(err) })
     }
 
+    /**
+     * Page Rendering
+     */
     render() {
         return (
-            
-            <div class="popular_catagory_area">
-                <div class="container">
-                    <div class="row gallery-item">
-                        <PhotoBoxes num_entries={ this.state.num_entries } images={ this.state.images } />
-                        <Pagination page={this.state.page} num_entries={this.state.num_entries} />
+            <div>
+                <RegularHeader heading="Photos"/>
+                <div class="popular_catagory_area">
+                    <div class="container">
+                        <div class="row gallery-item">
+                            <PhotoBoxes num_entries={ this.state.num_entries } images={ this.state.images } />
+                            <Pagination page={this.state.page} num_entries={this.state.num_entries} />
+                        </div>
                     </div>
                 </div>
             </div>
-            
         )
     }
 }
